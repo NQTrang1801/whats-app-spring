@@ -16,6 +16,10 @@ import java.awt.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "messages")
+@NamedQuery(name = messageConstants.FIND_MESSAGES_BY_CHAT_ID,
+            query = "SELECT m FROM Message m WHERE m.chat.id = :chatId ORDER BY  m.createDate")
+@NamedQuery(name = messageConstants.SET_MESSAGES_TO_SEEN_BY_CHAT,
+            query = "UPDATE Message SET state = :newState WHERE chat.id = :chatId")
 public class Message extends BaseAuditingEntity {
     @Id
     @SequenceGenerator(name = "msg_seq", sequenceName = "msg_seq", allocationSize = 1)

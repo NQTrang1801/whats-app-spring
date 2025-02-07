@@ -17,6 +17,12 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
+@NamedQuery(name = userConstants.FIND_USER_BY_EMAIL,
+            query = "SELECT u FROM User u WHERE email = :email")
+@NamedQuery(name = userConstants.FIND_ALL_USERS_EXCEPT_SELF,
+            query = "SELECT u FROM User u WHERE u.id != :publicId")
+@NamedQuery(name = userConstants.FIND_USER_BY_PUBLIC_ID,
+            query = "SELECT u FROM User u WHERE u.id = :publicId")
 public class User extends BaseAuditingEntity {
 
     private static final int LAST_ACTIVE_INTERVAL = 5;
