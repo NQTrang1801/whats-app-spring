@@ -8,17 +8,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.awt.*;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "messages")
-@NamedQuery(name = messageConstants.FIND_MESSAGES_BY_CHAT_ID,
+@NamedQuery(name = MessageConstants.FIND_MESSAGES_BY_CHAT_ID,
             query = "SELECT m FROM Message m WHERE m.chat.id = :chatId ORDER BY  m.createDate")
-@NamedQuery(name = messageConstants.SET_MESSAGES_TO_SEEN_BY_CHAT,
+@NamedQuery(name = MessageConstants.SET_MESSAGES_TO_SEEN_BY_CHAT,
             query = "UPDATE Message SET state = :newState WHERE chat.id = :chatId")
 public class Message extends BaseAuditingEntity {
     @Id
