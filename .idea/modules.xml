@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/whats-app-spring.iml" filepath="$PROJECT_DIR$/.idea/whats-app-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/whatsapp/whatsapp.iml" filepath="$PROJECT_DIR$/whatsapp/whatsapp.iml" />
     </modules>
   </component>
 </project>
