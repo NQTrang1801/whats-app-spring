@@ -1,5 +1,6 @@
 package com.socketapp.whatsapp.message;
 
+import com.socketapp.whatsapp.file.FileUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,6 +14,7 @@ public class MessageMapper {
                 .state(message.getState())
                 .createdAt(message.getCreatedDate())
                 // todo read the media file
+                .media(FileUtils.readFileFromLocation(message.getMediaFilePath()))
                 .build();
     }
 }
