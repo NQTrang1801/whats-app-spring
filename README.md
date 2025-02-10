@@ -18,7 +18,7 @@ This project is a WhatsApp-like messaging application built using **Spring Boot,
 - **Keycloak**: OAuth2 & OpenID Connect authentication provider.
 - **WebSockets**: Enables real-time communication.
 - **Spring Data JPA**: ORM for database interactions.
-- **PostgreSQL/MySQL**: Database for storing users and messages.
+- **PostgreSQL**: Database for storing users and messages.
 
 ### Frontend (Angular 19)
 - **Angular 19**: Modern frontend framework for SPA development.
