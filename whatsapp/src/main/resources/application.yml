@@ -11,7 +11,7 @@ spring:
       hibernate:
         format_sql: true
     database: postgresql
-    database-platform: org.hibernate,dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   flyway:
     enabled: false
 

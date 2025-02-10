@@ -36,7 +36,7 @@ public class User extends BaseAuditingEntity {
     @OneToMany(mappedBy = "sender")
     private List<Chat> chatAsSender;
 
-    @OneToMany(mappedBy = "reciever")
+    @OneToMany(mappedBy = "recipient")
     private List<Chat> chatAsReceiver;
 
     @Transient
